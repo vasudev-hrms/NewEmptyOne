@@ -1,0 +1,63 @@
+//Html
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+//CSS
+
+<html>
+<head>
+<style>
+body {background-color:lightgrey;}
+h1   {color:blue;}
+p    {color:green;}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+//JS
+<html>
+<body>
+
+<h1>The + Operator</h1>
+
+<p id="demo"></p>
+
+<script>
+var x = 5;
+var y = 2;
+var z = x + y;
+document.getElementById("demo").innerHTML = z;
+</script>
+
+</body>
+</html>
