@@ -1,0 +1,64 @@
+Basic Concepts
+What is scriptr.io?
+
+scriptr.io is a very powerful cloud service to run your server-side code. With scriptr.io, you use scripts to create the custom back-end APIs needed to power your Internet of Things (IoT) and other projects. scriptr.io allows you to get productive quickly by providing an integrated web-based environment for developing, running and debugging your code. 
+What are Scripts?
+
+Scripts are units of execution, after you create a script, it immediately becomes a web service with a unique secure HTTP end-point and ready to run as soon as it is invoked. Scripts can be created to be used as web services or as modules for other scripts. You can invoke directly your new scriptr.io APIs from an IoT, mobile or web project or from other web services.
+What is the Difference between Using scriptr.io and Running Your Own Servers?
+
+With scriptr.io, you don't need to handle hosting, deployment, management and upgrade of servers such as application containers, database servers or libraries to integrate with social networks and other web services. When your product goes to production and you need quick reliable scaling, you don't have to figure-out server architecture, scalability strategies, fault-tolerance, etc... You only concentrate on improving the business logic needed to power your project while we make sure that everything else is running smoothly for you.
+Supported Languages
+
+For now our script containers support JavaScript. We will be adding other languages in the future.
+What about Authentication and Security?
+Scripts can be invoked as secure web services using HTTPS and by providing a unique secure token associated with each account.
+Invoking scriptr.io URLs
+
+scriptr.io scripts are invokable based on the following patterns for the POST and GET methods respectively:
+POST
+
+    curl -X POST -F <requestParameter> -d <postBody> -H "Authorization: bearer <authorizationToken>" "https://api.scriptrapps.io/<scriptName>"
+
+GET
+
+    curl -X GET -H "Authorization: bearer <authorizationToken>" "https://api.scriptrapps.io/<scriptName>?<requestParameter>"
+
+Parameter	Description
+httpMethod	HTTP Verb:  POST, GET.
+timestamp	
+
+A UNIX timestamp denoting the current time when the request is issued.
+requestParameter	Request parameter specific to what your script is expecting.
+postBody	
+
+"value1":"some value", "value2":"some value", "value3":"some value".
+
+authorizationToken	Unique token provided for each account.
+scriptName	The unique name per account that you have given to the script you want to invoke.
+What are Experimental Featurses? 
+
+At scriptr.io, we keep improving our product to bring you the best. You might encounter several features that our team is still developing - they are labelled with the Experimental tag. You may tinker with them as much as you want, but beware that these experimental features might change, break, or disappear at any time.
+Getting Started
+Open an Account
+
+You can create a new scriptr.io account from this page by providing your email and a password, or signing in with your GitHub, Twitter or Facebook account. 
+Write Your First Script and Run It
+
+Once you log in to scriptr.io, you land on your workspace. There are plenty of very useful features in it. For now, we will just go ahead and create our first script by clicking on the New Script button at the lower left corner of the screen.
+
+In the scriptr.io editor, simply add a line to return the traditional "Hello world":
+
+    return "Hello world";
+
+Once done, do not forget to name your script and save it before you execute it. Note that script names should abide by the following rules:
+
+    Must be minimum 3 characters and maximum 128 characters long, including any folders.
+    Can consist of up to 5 folders and the script file name separated by the character '/'.
+    Must begin with an alphabetic character.
+    Must end with an alphanumeric character or underscore (_).
+    Can contain alphanumeric characters, underscores (_) and periods (.).
+    Cannot have two or more consecutive periods.
+
+Now run your script by clicking on the Run button on the top-right part of the editor. Notice the console in the lower half of the screen where you can see the result of the execution. The first line of the console is the curl instruction to issue from an HTTP client to trigger the execution of your script.
+What Can a Script Do? 
